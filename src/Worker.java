@@ -16,17 +16,17 @@ public class Worker {
 
     public int getAge(){
         int currentYear=2024;
-        String birthYearAsString = this.birthDate.substring(this.birthDate.length()-1,this.birthDate.length()-5);
-        int birthYear = Integer.parseInt(birthYearAsString);
+        int birthYear = Integer.parseInt(this.birthDate.substring(this.birthDate.length()-5,this.birthDate.length()-1));
         return currentYear-birthYear;
     }
 
     public double collectPay(){
+
         return 0.0;
     }
 
     public void terminate(String endDate){
-
+        this.endDate=endDate;
     }
 
     @Override

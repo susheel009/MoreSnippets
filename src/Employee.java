@@ -9,5 +9,14 @@ public class Employee extends Worker{
         this.hireDate = hireDate;
     }
 
-
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "endDate='" + endDate + '\'' +
+                ", birthDate='" + birthDate + '\'' +
+                ", name='" + name + '\'' +
+                ", hireDate='" + hireDate + '\'' +
+                ", employeeID=" + employeeID +
+                "} " + super.toString();
+    }
 }
