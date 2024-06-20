@@ -1,24 +1,21 @@
 public class HourlyEmployee extends Employee{
 
-    public double hourlyPayRate;
+    private double hourlyPayRate;
 
-    public HourlyEmployee(String name, String birthDate, String endDate, long employeeID, String hireDate, double hourlyPayRate) {
-        super(name, birthDate, endDate, employeeID, hireDate);
+    public HourlyEmployee(String name, String birthDate, String endDate, String hireDate, double hourlyPayRate) {
+        super(name, birthDate, endDate, hireDate);
         this.hourlyPayRate = hourlyPayRate;
     }
 
-    public void getDoublePay(){
+    public double getDoublePay(){
         this.hourlyPayRate*=2;
+        return this.hourlyPayRate;
     }
 
     @Override
     public String toString() {
         return "HourlyEmployee{" +
                 "hourlyPayRate=" + hourlyPayRate +
-                ", employeeID=" + employeeID +
-                ", hireDate='" + hireDate + '\'' +
-                ", name='" + name + '\'' +
-                ", birthDate='" + birthDate + '\'' +
                 ", endDate='" + endDate + '\'' +
                 "} " + super.toString();
     }

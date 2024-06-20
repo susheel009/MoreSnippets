@@ -1,8 +1,8 @@
 public class Worker {
 
-    public String name;
-    public String birthDate;
-    public String endDate;
+    private String name;
+    private String birthDate;
+    protected String endDate;
 
     public Worker(){
         this("john","1-1-1980","Still Employed");
@@ -16,7 +16,7 @@ public class Worker {
 
     public int getAge(){
         int currentYear=2024;
-        int birthYear = Integer.parseInt(this.birthDate.substring(this.birthDate.length()-5,this.birthDate.length()-1));
+        int birthYear = Integer.parseInt(this.birthDate.substring(this.birthDate.length()-4));
         return currentYear-birthYear;
     }
 
