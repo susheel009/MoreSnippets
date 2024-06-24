@@ -1,3 +1,7 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.logging.Logger;
+
 public class SalariedEmployee extends Employee{
 
     private double annualSalary;
@@ -13,7 +17,19 @@ public class SalariedEmployee extends Employee{
         this.isRetired=isRetired;
     }
 
+    public double collectPay(){
+        if(isRetired){
+            return (this.annualSalary*0.8)/26;
+        }else{
+            return this.annualSalary/26;
+        }
+    }
+
     public void retire(){
+        LocalDate ld = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-uuuu");
+        String formatted = ld.format(formatter);
+        terminate(formatted);
         this.isRetired=true;
     }
 

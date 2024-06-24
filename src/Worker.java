@@ -5,7 +5,7 @@ public class Worker {
     protected String endDate;
 
     public Worker(){
-        this("john","1-1-1980","Still Employed");
+        this("john","1-1-1980","N/A");
     }
 
     public Worker(String name, String birthDate, String endDate){
