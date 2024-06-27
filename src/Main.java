@@ -26,5 +26,8 @@ public class Main {
         System.out.println(susheel);
         susheel.getDoublePay();
         System.out.println(susheel);
+        
+        SalariedEmployee sam = new SalariedEmployee();
+        System.out.println(sam);
     }
 }
